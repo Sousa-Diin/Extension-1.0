@@ -6,24 +6,25 @@
   </ion-toolbar>
 </ion-header>
 
+
 <ion-content [fullscreen]="true">
-  <button ion-button icon-start>
-    <ion-icon name="home"></ion-icon>
-    Left Icon
-  </button>
 
-  <ion-list>
+   
+<ion-fab vertical="top" horizontal="end" edge slot="fixed">
+  <ion-fab-button>
+    <ion-icon name="calculator"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
+
 
     <ion-item>
-      <ion-label floating></ion-label>
-      <ion-input placeholder="Peso (kg)" type="numeric"></ion-input>
+      <ion-label position='floating'>Peso (kg)</ion-label>
+      <ion-input type="'number" ></ion-input>
     </ion-item>
   
     <ion-item>
-      <ion-label floating></ion-label>
-      <ion-input placeholder="Altura(m) "type="text"></ion-input>
+      <ion-label position='floating'>Altura(m)</ion-label>
+      <ion-input type="'number" ></ion-input>
     </ion-item>
-  
-  </ion-list>
 
 </ion-content>
