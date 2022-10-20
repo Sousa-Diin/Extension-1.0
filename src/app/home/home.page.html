@@ -1,20 +1,29 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
+    <ion-title class='text-align-center'>
+      Calculadora de IMC
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <button ion-button icon-start>
+    <ion-icon name="home"></ion-icon>
+    Left Icon
+  </button>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-list>
+
+    <ion-item>
+      <ion-label floating>Peso (kg)</ion-label>
+      <ion-input type="numeric"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label floating>Altura(m)</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+  
+  </ion-list>
+
 </ion-content>
