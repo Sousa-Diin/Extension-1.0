@@ -13,6 +13,11 @@ export class HomePage {
 
   constructor(private toastController: ToastController) {}
 
+  isFormValid(){
+    return(this.peso && this.altura && this.peso > 0 && this.altura > 0);
+
+  }
+
   handleCalculator(){
     const imc = this.peso / (this.altura * this.altura );
     //(Math.exp(this.altura)))
@@ -21,12 +26,15 @@ export class HomePage {
 
   async showMessage(msg : string) {
 
+    //Line 26-29 lida com a acao de criar varios toast
+
     const previousToast = await this.toastController.getTop();
     if(previousToast){
       await this.toastController.dismiss();
     }
     const toast = await this.toastController.create({
       message:msg,
+      color:'medium',
       //duration:3000
       buttons:[{
         icon:'close'

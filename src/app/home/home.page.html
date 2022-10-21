@@ -1,5 +1,5 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
+<ion-header [translucent]="true" >
+  <ion-toolbar color="warning">
     <ion-title class='text-align-center'>
       Calculadora de IMC
     </ion-title>
@@ -7,22 +7,22 @@
 </ion-header>
 
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" color="dark">
 
    
-<ion-fab vertical="top" horizontal="end" edge slot="fixed">
-  <ion-fab-button (click)="handleCalculator()">
+<ion-fab vertical="top" horizontal="end" edge slot="fixed" >
+  <ion-fab-button (click)="handleCalculator()" [disabled]="!isFormValid()" color="danger"> 
     <ion-icon name="calculator"></ion-icon>
   </ion-fab-button>
 </ion-fab>
 
 
-    <ion-item>
+    <ion-item color="dark">
       <ion-label position='floating'>Peso (kg)</ion-label>
       <ion-input type="'number" [(ngModel)]="peso" ></ion-input>
     </ion-item>
   
-    <ion-item>
+    <ion-item color="dark">
       <ion-label position='floating'>Altura(m)</ion-label>
       <ion-input type="'number" [(ngModel)]="altura"></ion-input>
     </ion-item>
