@@ -8,15 +8,20 @@ import { ToastController } from '@ionic/angular';
 })
 export class HomePage {
 
+  peso: number;
+  altura: number;
+
   constructor(private toastController: ToastController) {}
 
   handleCalculator(){
-    console.log("Evento onClick: Calculando...");
+    const imc = (this.peso / (this.altura * this.altura) ;
+    //(Math.exp(this.altura)))
+    this.showMessage(`IMC = ${imc.toFixed(2)}`);
   }
 
-  async showMessage() {
+  async showMessage(msg : string) {
     const toast = await this.toastController.create({
-      message:'Clicou',
+      message:msg,
       duration:3000
     });
 
